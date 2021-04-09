@@ -1,5 +1,4 @@
-#ifndef SNAKE_H
-#define SNAKE_H
+#pragma once
 
 #include <SFML/Graphics.hpp>
 #include <vector>
@@ -31,9 +30,3 @@ public:
 	void changeDirection(Direction);
 	void draw(sf::RenderWindow&);
 };
-
-
-#endif // !SNAKE_H
-
-
-

@@ -33,14 +33,16 @@ Snake::Snake()
 	length = 3;
 	head_direction = Direction::RIGHT;
 	positions.clear();
-	positions.push_back(sf::Vector2f(5 * 40, 7 * 40));
-	positions.push_back(sf::Vector2f(4 * 40, 7 * 40));
-	positions.push_back(sf::Vector2f(3 * 40, 7 * 40));
+	positions.reserve(length);
+	positions.emplace_back(5 * 40, 7 * 40);
+	positions.emplace_back(4 * 40, 7 * 40);
+	positions.emplace_back(3 * 40, 7 * 40);
 	
 	directions.clear();
-	directions.push_back(Direction::RIGHT);
-	directions.push_back(Direction::RIGHT);
-	directions.push_back(Direction::RIGHT);
+	directions.reserve(length);
+	directions.emplace_back(Direction::RIGHT);
+	directions.emplace_back(Direction::RIGHT);
+	directions.emplace_back(Direction::RIGHT);
 	buildBody();
 }
 
@@ -48,10 +50,10 @@ void Snake::buildBody() {
 	for (auto cell : body)
 		delete cell;
 	body.clear();
-	
+	body.reserve(length);
+
 	body.push_back(new SnakeCell("images/snake_head", positions[0], false, directions[0]));
 	for (unsigned int i = 1; i < length - 1; i++) {
-			
 		if (directions[i] == Direction::UP) {
 			if (directions[i - 1] == Direction::UP) {
 				body.push_back(new SnakeCell("images/snake_back", positions[i], false, directions[i]));

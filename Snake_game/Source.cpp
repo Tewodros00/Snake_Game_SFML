@@ -87,7 +87,9 @@ int main()
         int x = static_cast<int>(snake.positions[0].x / 40);
         int y = static_cast<int>(snake.positions[0].y / 40);
 
-        if (!gameWorld.cells[x][y]->isPassable or std::find(snake.positions.begin() + 1, snake.positions.end(), snake.positions[0]) != snake.positions.end()) {
+        if (!gameWorld.cells[x][y]->isPassable or 
+            std::find(snake.positions.begin() + 1, snake.positions.end(), snake.positions[0]) != snake.positions.end()) 
+        {
             dying_sound.play();
             isGameOver = true;
             if (score > highScore)
@@ -102,7 +104,7 @@ int main()
             
         
         if (score >= 300)
-            gameSpeed = 25;
+            gameSpeed = 35;
         else if (score >= 250)
             gameSpeed = 50;
         else if (score >= 150)

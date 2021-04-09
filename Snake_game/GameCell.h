@@ -1,5 +1,4 @@
-#ifndef GAMECELL_H
-#define GAMECELL_H
+#pragma once
 
 #include<SFML/Graphics.hpp>
 
@@ -12,5 +11,3 @@ public:
 	GameCell(std::string, sf::Vector2f, bool);
 	bool setSpriteTexture(std::string);
 };
-
-#endif // !GAMECELL_H

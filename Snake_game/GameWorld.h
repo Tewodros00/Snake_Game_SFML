@@ -1,5 +1,4 @@
-#ifndef GAMEWORLD_H
-#define GAMEWORLD_H
+#pragma once
 
 #include <SFML/Graphics.hpp>
 #include "GameCell.h"
@@ -17,6 +16,3 @@ public:
 	GameWorld();
 	void draw(sf::RenderWindow&);
 };
-
-#endif // !GAMEWORLD_H
-

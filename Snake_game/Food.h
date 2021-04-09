@@ -1,5 +1,4 @@
-#ifndef FOOD_H
-#define FOOD_H
+#pragma once
 
 #include "SFML/Graphics.hpp"
 #include "GameCell.h"
@@ -15,6 +14,3 @@ class Food {
 		GameCell* food;
 		sf::Vector2f position;
 };
-
-
-#endif // !FOOD_H

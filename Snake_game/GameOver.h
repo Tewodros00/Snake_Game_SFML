@@ -1,4 +1,5 @@
 #pragma once
+
 #include <SFML/Graphics.hpp>
 
 class GameOver
@@ -15,6 +16,4 @@ private:
 	sf::Text playAgainText;
 
 	sf::RectangleShape background;
-
 };
-

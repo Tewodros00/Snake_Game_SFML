@@ -8,9 +8,12 @@ GameWorld::GameWorld() {
 
 void GameWorld::initializeGround() {
 	cells.clear();
+	GameCell* ground = 
+	cells.reserve(gridLength);
 	for (int i = 0; i < 16; i++) {
 		if (i == 0) {
 			std::vector<GameCell*> row;
+			row.reserve(gridLength);
 			for (int j = 0; j < gridLength; j++) {
 				row.push_back(new GameCell("images/wall_top.png", sf::Vector2f(j * 40, 0), false));
 			}
@@ -18,6 +21,7 @@ void GameWorld::initializeGround() {
 		}
 		else if (i == 15) {
 			std::vector<GameCell*> row;
+			row.reserve(gridLength);
 			for (int j = 0; j < gridLength; j++) {
 				row.push_back(new GameCell("images/wall_bottom.png", sf::Vector2f(j * 40, 600), false));
 			}
@@ -25,6 +29,7 @@ void GameWorld::initializeGround() {
 		}
 		else {
 			std::vector<GameCell*> row;
+			row.reserve(gridLength);
 			row.push_back(new GameCell("images/wall_left.png", sf::Vector2f(0, i * 40), false));
 			for (int j = 1; j < 15; j++) {
 				row.push_back(new GameCell("images/ground.png", sf::Vector2f(j * 40, i * 40), true));
