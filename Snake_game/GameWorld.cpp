@@ -8,7 +8,6 @@ GameWorld::GameWorld() {
 
 void GameWorld::initializeGround() {
 	cells.clear();
-	GameCell* ground = 
 	cells.reserve(gridLength);
 	for (int i = 0; i < 16; i++) {
 		if (i == 0) {
