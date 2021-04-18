@@ -3,7 +3,7 @@
 #include <string>
 
 GameOver::GameOver() {
-	if (!gameFont.loadFromFile("Fonts/pixel_font.ttf")) {
+	if (!gameFont.loadFromFile("../Resources/Fonts/pixel_font.ttf")) {
 		std::cout << "Error: Unable to open font file" << std::endl;
 		return;
 	}

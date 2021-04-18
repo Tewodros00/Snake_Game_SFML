@@ -14,7 +14,7 @@ void GameWorld::initializeGround() {
 			std::vector<GameCell*> row;
 			row.reserve(gridLength);
 			for (int j = 0; j < gridLength; j++) {
-				row.push_back(new GameCell("images/wall_top.png", sf::Vector2f(j * 40, 0), false));
+				row.push_back(new GameCell("../Resources/Images/wall_top.png", sf::Vector2f(j * 40, 0), false));
 			}
 			cells.push_back(row);
 		}
@@ -22,18 +22,18 @@ void GameWorld::initializeGround() {
 			std::vector<GameCell*> row;
 			row.reserve(gridLength);
 			for (int j = 0; j < gridLength; j++) {
-				row.push_back(new GameCell("images/wall_bottom.png", sf::Vector2f(j * 40, 600), false));
+				row.push_back(new GameCell("../Resources/Images/wall_bottom.png", sf::Vector2f(j * 40, 600), false));
 			}
 			cells.push_back(row);
 		}
 		else {
 			std::vector<GameCell*> row;
 			row.reserve(gridLength);
-			row.push_back(new GameCell("images/wall_left.png", sf::Vector2f(0, i * 40), false));
+			row.push_back(new GameCell("../Resources/Images/wall_left.png", sf::Vector2f(0, i * 40), false));
 			for (int j = 1; j < 15; j++) {
-				row.push_back(new GameCell("images/ground.png", sf::Vector2f(j * 40, i * 40), true));
+				row.push_back(new GameCell("../Resources/Images/ground.png", sf::Vector2f(j * 40, i * 40), true));
 			}
-			row.push_back(new GameCell("images/wall_right.png", sf::Vector2f(600, i * 40), false));
+			row.push_back(new GameCell("../Resources/Images/wall_right.png", sf::Vector2f(600, i * 40), false));
 			cells.push_back(row);
 		}
 	}	

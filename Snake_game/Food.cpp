@@ -24,7 +24,7 @@ sf::Vector2f Food::generateFood(std::vector<sf::Vector2f> positions) {
 		position = sf::Vector2f(((rand() % 14) + 1) * 40, ((rand() % 14) + 1) * 40);
 		iter = std::find(positions.begin(), positions.end(), position);
 	} 
-	food = new GameCell("images/food.png", position, true);
+	food = new GameCell("../Resources/Images/food.png", position, true);
 	return position;
 }
 

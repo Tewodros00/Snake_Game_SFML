@@ -19,11 +19,10 @@ int main()
 
     sf::SoundBuffer eatingSoundBuffer;
     sf::Sound eating_sound;
-    loadSound("sounds/eating.wav", eatingSoundBuffer, eating_sound);
+    loadSound("../Resources/Audios/eating.wav", eatingSoundBuffer, eating_sound);
     sf::SoundBuffer dyingSoundBuffer;
     sf::Sound dying_sound;
-    loadSound("sounds/dying.wav", dyingSoundBuffer, dying_sound);
-    
+    loadSound("../Resources/Audios/dying.wav", dyingSoundBuffer, dying_sound);
 
     GameWorld gameWorld = GameWorld();
     Snake snake = Snake();

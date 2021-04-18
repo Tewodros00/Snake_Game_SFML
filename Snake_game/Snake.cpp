@@ -52,54 +52,54 @@ void Snake::buildBody() {
 	body.clear();
 	body.reserve(length);
 
-	body.push_back(new SnakeCell("images/snake_head", positions[0], false, directions[0]));
+	body.push_back(new SnakeCell("../Resources/Images/snake_head", positions[0], false, directions[0]));
 	for (unsigned int i = 1; i < length - 1; i++) {
 		if (directions[i] == Direction::UP) {
 			if (directions[i - 1] == Direction::UP) {
-				body.push_back(new SnakeCell("images/snake_back", positions[i], false, directions[i]));
+				body.push_back(new SnakeCell("../Resources/Images/snake_back", positions[i], false, directions[i]));
 			}
 			else if (directions[i - 1] == Direction::LEFT) {
-				body.push_back(new SnakeCell("images/snake_turn", positions[i], false, Direction::DOWN));
+				body.push_back(new SnakeCell("../Resources/Images/snake_turn", positions[i], false, Direction::DOWN));
 			}
 			else if (directions[i - 1] == Direction::RIGHT) {
-				body.push_back(new SnakeCell("images/snake_turn", positions[i], false, Direction::RIGHT));
+				body.push_back(new SnakeCell("../Resources/Images/snake_turn", positions[i], false, Direction::RIGHT));
 			}
 		}
 		else if (directions[i] == Direction::DOWN) {
 			if (directions[i - 1] == Direction::DOWN) {
-				body.push_back(new SnakeCell("images/snake_back", positions[i], false, directions[i]));
+				body.push_back(new SnakeCell("../Resources/Images/snake_back", positions[i], false, directions[i]));
 			}
 			else if (directions[i - 1] == Direction::LEFT) {
-				body.push_back(new SnakeCell("images/snake_turn", positions[i], false, Direction::LEFT));
+				body.push_back(new SnakeCell("../Resources/Images/snake_turn", positions[i], false, Direction::LEFT));
 			}
 			else if (directions[i - 1] == Direction::RIGHT) {
-				body.push_back(new SnakeCell("images/snake_turn", positions[i], false, Direction::UP));
+				body.push_back(new SnakeCell("../Resources/Images/snake_turn", positions[i], false, Direction::UP));
 			}
 		}
 		else if (directions[i] == Direction::LEFT) {
 			if (directions[i - 1] == Direction::UP) {
-				body.push_back(new SnakeCell("images/snake_turn", positions[i], false, Direction::UP));
+				body.push_back(new SnakeCell("../Resources/Images/snake_turn", positions[i], false, Direction::UP));
 			}
 			else if (directions[i - 1] == Direction::DOWN) {
-				body.push_back(new SnakeCell("images/snake_turn", positions[i], false, Direction::RIGHT));
+				body.push_back(new SnakeCell("../Resources/Images/snake_turn", positions[i], false, Direction::RIGHT));
 			}
 			else if (directions[i - 1] == Direction::LEFT) {
-				body.push_back(new SnakeCell("images/snake_back", positions[i], false, directions[i]));
+				body.push_back(new SnakeCell("../Resources/Images/snake_back", positions[i], false, directions[i]));
 			}
 		}
 		else if (directions[i] == Direction::RIGHT) {
 			if (directions[i - 1] == Direction::UP) {
-				body.push_back(new SnakeCell("images/snake_turn", positions[i], false, Direction::LEFT));
+				body.push_back(new SnakeCell("../Resources/Images/snake_turn", positions[i], false, Direction::LEFT));
 			}
 			else if (directions[i - 1] == Direction::DOWN) {
-				body.push_back(new SnakeCell("images/snake_turn", positions[i], false, Direction::DOWN));
+				body.push_back(new SnakeCell("../Resources/Images/snake_turn", positions[i], false, Direction::DOWN));
 			}
 			else if (directions[i - 1] == Direction::RIGHT) {
-				body.push_back(new SnakeCell("images/snake_back", positions[i], false, directions[i]));
+				body.push_back(new SnakeCell("../Resources/Images/snake_back", positions[i], false, directions[i]));
 			}
 		}
 	}
-	body.push_back(new SnakeCell("images/snake_tail", positions[length - 1], false, directions[length - 2]));
+	body.push_back(new SnakeCell("../Resources/Images/snake_tail", positions[length - 1], false, directions[length - 2]));
 }
 
 void Snake::changeDirection(Direction new_direction) {
